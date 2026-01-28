@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Buyer Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="buyer-bg">
+
+<h1 class="title">Select Waste Type</h1>
+
+<div class="filter-box">
+  <select id="wasteType" onchange="showWastes()">
+    <option value="">-- Choose Waste Type --</option>
+    <option value="leaf">Leaf Waste</option>
+    <option value="paddy">Paddy Straw</option>
+    <option value="stem">Stem Waste</option>
+    <option value="husk">Rice Husk</option>
+    <option value="sugarcane">Sugarcane Bagasse</option>
+  </select>
+</div>
+
+<div id="cards" class="card-container"></div>
+
+<script src="../js/buyer.js"></script>
+</body>
+</html>
