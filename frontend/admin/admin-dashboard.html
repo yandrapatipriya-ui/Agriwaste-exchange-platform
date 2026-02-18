@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard | Agri Waste Exchange</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🌾 AgriExchange Admin</div>
+  <div class="nav-links">
+    <a href="#" onclick="location.reload()">System Overview</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="dashboard-container">
+  <header>
+    <h1>System Administration</h1>
+    <p>Monitor users, manage listings, and oversee platform health.</p>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card" onclick="viewUsers('Farmer')">
+      <h3 id="statTotalFarmers">0</h3>
+      <p>Total Farmers</p>
+    </div>
+    <div class="stat-card" onclick="viewUsers('Buyer')">
+      <h3 id="statTotalBuyers">0</h3>
+      <p>Total Buyers</p>
+    </div>
+    <div class="stat-card" onclick="viewWastes()">
+      <h3 id="statTotalWastes">0</h3>
+      <p>Waste Listings</p>
+    </div>
+  </div>
+
+  <div id="adminContent" class="admin-content-area" style="background:white; padding:2rem; border-radius:var(--border-radius); box-shadow:var(--shadow);">
+    <div style="text-align:center; padding:3rem; color:#7f8c8d;">
+      <h3>Select a category above to view and manage data.</h3>
+    </div>
+  </div>
+</div>
+
+<script src="../js/logout.js"></script>
+<script src="../js/admin.js"></script>
+</body>
+</html>

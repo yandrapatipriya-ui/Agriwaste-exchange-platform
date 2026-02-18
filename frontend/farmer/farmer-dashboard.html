@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Farmer Dashboard | Agri Waste Exchange</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">🌾 AgriExchange</div>
+  <div class="nav-links">
+    <a href="#">Dashboard</a>
+    <a href="add-waste.html">Add Waste</a>
+    <button onclick="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="dashboard-container">
+  <header>
+    <h1>Farmer Dashboard</h1>
+    <p>Manage your waste listings and buyer requests efficiently.</p>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <h3 id="statTotalPosts">0</h3>
+      <p>Total Posts</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="statPendingRequests">0</h3>
+      <p>Pending Requests</p>
+    </div>
+    <div class="stat-card">
+      <h3 id="statApprovedRequests">0</h3>
+      <p>Approved Deals</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="section-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+      <h2>Your Waste Listings</h2>
+      <button class="btn-primary" style="width:auto; padding:8px 20px;" onclick="location.href='add-waste.html'">+ New Post</button>
+    </div>
+    <div id="postList" class="grid-listings">
+      <!-- Dynamic Content -->
+    </div>
+  </section>
+
+  <section style="margin-top: 3rem;">
+    <h2>Incoming Buyer Requests</h2>
+    <div id="requestList" class="grid-listings">
+      <!-- Dynamic Content -->
+    </div>
+  </section>
+</div>
+
+<script src="../js/logout.js"></script>
+<script src="../js/farmer.js"></script>
+</body>
+</html>
